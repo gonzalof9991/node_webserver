@@ -1,11 +1,7 @@
 const express = require('express')
 const app = express()
-if (process.env.NODE_ENV !== 'production') {
-    require('dotenv').config();
-}else{
-    require('dotenv').config({path: '.env.production'});
-}
-const port = process.env.PORT || 3000;
+require('dotenv').config();
+const port = process.env.PORT;
 
 const hbs = require('hbs');
 // ----------------- Handlebars -----------------
